@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_duckdb__orders
+    description: >
+      duckdb-specific stating model that 
+      joins customers to the orders table
+
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        tests:
+          - not_null
